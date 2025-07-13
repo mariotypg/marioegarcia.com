@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario E Garcia - Executive Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --dark-navy: #081135;
+            --harvest-gold: #e5bd60;
+            --white-ivory: #fff9f0;
+            --eerie-black: #191919;
+            --paper: #ffffff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--eerie-black);
+            background: white;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Header Section */
+        header {
+            background: var(--dark-navy);
+            color: var(--white-ivory);
+            padding: 40px 50px 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(229, 189, 96, 0.1) 100%);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--harvest-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .executive-title {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 25px;
+            font-size: 13px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Professional Summary */
+        .summary {
+            padding: 30px 50px;
+            background: var(--white-ivory);
+            font-size: 13px;
+            line-height: 1.8;
+            text-align: justify;
+            border-left: 4px solid var(--harvest-gold);
+        }
+        
+        /* Main Content */
+        .content {
+            padding: 30px 50px;
+        }
+        
+        /* Section Headers */
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--harvest-gold);
+            page-break-after: avoid;
+        }
+        
+        /* Timeline Entry */
+        .timeline-entry {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            page-break-after: avoid;
+        }
+        
+        .company-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark-navy);
+            margin-bottom: 3px;
+        }
+        
+        .company-info p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .timeline-date {
+            font-size: 13px;
+            color: var(--harvest-gold);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .timeline-description {
+            font-size: 12px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .achievements li {
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--harvest-gold);
+            font-weight: bold;
+        }
+        
+        /* Philosophy Section */
+        .philosophy-section {
+            background: var(--white-ivory);
+            padding: 25px 30px;
+            margin: 0 50px 30px;
+            border: 1px solid var(--harvest-gold);
+            page-break-inside: avoid;
+        }
+        
+        .philosophy-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .philosophy-quote {
+            font-style: italic;
+            font-size: 14px;
+            text-align: center;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        
+        .philosophy-points {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .philosophy-point {
+            text-align: center;
+        }
+        
+        .philosophy-point h4 {
+            font-size: 13px;
+            color: var(--dark-navy);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .philosophy-point p {
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        
+        /* Key Metrics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 20px 10px;
+            background: var(--white-ivory);
+            border: 1px solid var(--harvest-gold);
+        }
+        
+        .metric-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--harvest-gold);
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 11px;
+            color: var(--dark-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Clients Section */
+        .clients-section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .client-item {
+            font-size: 13px;
+            padding: 10px 15px;
+            background: var(--white-ivory);
+            border-left: 3px solid var(--harvest-gold);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-navy);
+            color: var(--white-ivory);
+            padding: 25px 50px;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .footer-quote {
+            font-style: italic;
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .footer-cta {
+            font-size: 12px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                font-size: 10pt;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            header {
+                padding: 30px 40px 25px;
+            }
+            
+            .name {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 16px;
+            }
+            
+            .summary {
+                padding: 25px 40px;
+                font-size: 11pt;
+            }
+            
+            .content {
+                padding: 25px 40px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .timeline-entry {
+                margin-bottom: 20px;
+            }
+            
+            .achievements li {
+                margin-bottom: 6px;
+                font-size: 11pt;
+            }
+            
+            .philosophy-section {
+                margin: 0 40px 25px;
+                padding: 20px 25px;
+            }
+            
+            .footer {
+                padding: 20px 40px;
+            }
+            
+            /* Ensure clean page breaks */
+            .timeline-entry, .philosophy-section, .metrics-grid, .clients-section {
+                page-break-inside: avoid;
+            }
+            
+            .section-title {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1 class="name">Mario E Garcia</h1>
+                <p class="tagline">Visionary Executive • Serial Entrepreneur • Transformational Leader</p>
+                <p class="executive-title">Fortune 500-Ready CEO/COO • M&A Strategist • Operational Excellence Expert</p>
+                <div class="contact-info">
+                    <span>📧 contact@marioegarcia.com</span>
+                    <span>📱 (407) 577-4946</span>
+                    <span>🌐 marioegarcia.com</span>
+                    <span>📍 Oviedo, Florida</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="summary">
+            <strong>Executive Summary:</strong> Battle-tested leader who built a fire protection firm from concept to successful acquisition, serving Fortune 500 clients including Kaseya Center (Miami Heat Arena) and Ritz-Carlton properties. Proven ability to transform vision into value, having conducted 2,000+ risk assessments while building scalable operations. Unique blend of entrepreneurial agility and enterprise sophistication, with 15+ years of P&L responsibility starting at age 17. Ready to drive transformational growth as CEO/COO of an ambitious organization.
+        </div>
+        
+        <div class="content">
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">17</div>
+                    <div class="metric-label">Age Started Leading</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">2,000+</div>
+                    <div class="metric-label">Risk Assessments</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">Exit Success</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">15+</div>
+                    <div class="metric-label">Years Leadership</div>
+                </div>
+            </div>
+            
+            <section class="section">
+                <h2 class="section-title">Executive Leadership Journey</h2>
+                
+                <div class="timeline-entry">
+                    <div class="timeline-header">
+                        <div class="company-info">
+                            <h3>Founder & Chief Executive Officer</h3>
+                            <p>Mako Fire Group Inc. • Miami, FL</p>
+                        </div>
+                        <span class="timeline-date">2018 – 2024</span>
+                    </div>
+                    <p class="timeline-description">
+                        Built and scaled a premier fire protection services firm from zero to acquisition by a national industry leader. Architected operational systems that enabled 2,000+ annual engagements while maintaining premium service standards for enterprise clients.
+                    </p>
+                    <ul class="achievements">
+                        <li>Achieved profitable exit through strategic acquisition, delivering exceptional ROI to stakeholders</li>
+                        <li>Secured and retained Fortune 500 clients including Kaseya Center, Ritz-Carlton, and BankUnited</li>
+                        <li>Scaled operations from startup to 12-person team across technical and administrative functions</li>
+                        <li>Executed M&A strategy acquiring competitor's division, expanding capacity by 30%</li>
+                        <li>Established reputation as trusted advisor to C-suite executives on enterprise risk management</li>
+                        <li>Developed proprietary systems for compliance tracking and client reporting</li>
+                        <li>Achieved 80% reduction in client compliance violations through strategic interventions</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-entry">
+                    <div class="timeline-header">
+                        <div class="company-info">
+                            <h3>Sales Team Leader</h3>
+                            <p>American Life Insurance • Miami, FL</p>
+                        </div>
+                        <span class="timeline-date">2016-2017</span>
+                    </div>
+                    <p class="timeline-description">
+                        Transformed underperforming sales unit into high-performing team through strategic leadership and process optimization. Gained deep understanding of enterprise sales psychology and scalable team dynamics.
+                    </p>
+                    <ul class="achievements">
+                        <li>Restructured sales processes resulting in improved conversion rates and team morale</li>
+                        <li>Developed training programs that became model for other regional teams</li>
+                        <li>Mastered enterprise-level sales strategies applicable across industries</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-entry">
+                    <div class="timeline-header">
+                        <div class="company-info">
+                            <h3>Store Manager</h3>
+                            <p>Premier Men's Formal Wear • Miami, FL</p>
+                        </div>
+                        <span class="timeline-date">2012-2015</span>
+                    </div>
+                    <p class="timeline-description">
+                        Managed high-end retail operation serving Miami's elite at age 17, developing foundational leadership skills and building network of high-net-worth individuals and entrepreneurs.
+                    </p>
+                    <ul class="achievements">
+                        <li>Youngest manager in company history, responsible for full P&L at age 17</li>
+                        <li>Built relationships with influential business leaders who became mentors and advisors</li>
+                        <li>Developed customer service excellence standards that drove repeat business</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Philosophy Section -->
+            <div class="philosophy-section">
+                <h3>Executive Philosophy</h3>
+                <p class="philosophy-quote">
+                    "The modern MBA teaches you to analyze businesses. Running one since 17 teaches you to build them."
+                </p>
+                <div class="philosophy-points">
+                    <div class="philosophy-point">
+                        <h4>PATTERN RECOGNITION</h4>
+                        <p>15+ years reading markets, people, and opportunities with real consequences</p>
+                    </div>
+                    <div class="philosophy-point">
+                        <h4>RELATIONSHIP CAPITAL</h4>
+                        <p>Networks built over decades through proven delivery and trust</p>
+                    </div>
+                    <div class="philosophy-point">
+                        <h4>FAILURE IMMUNITY</h4>
+                        <p>Battle-tested through crises others only simulate in case studies</p>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="section clients-section">
+                <h2 class="section-title">Marquee Client Portfolio</h2>
+                <div class="clients-grid">
+                    <div class="client-item">
+                        <strong>Kaseya Center</strong> - Miami Heat Arena
+                    </div>
+                    <div class="client-item">
+                        <strong>Ritz-Carlton Properties</strong> - Multiple Locations
+                    </div>
+                    <div class="client-item">
+                        <strong>BankUnited</strong> - Financial Centers
+                    </div>
+                    <div class="client-item">
+                        <strong>Leon Medical Centers</strong> - Healthcare Facilities
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Core Executive Competencies</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div>
+                        <h4 style="font-size: 14px; color: var(--dark-navy); margin-bottom: 10px;">Strategic Leadership</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Visionary Strategy Development</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• M&A Execution & Integration</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• P&L Management & Optimization</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Stakeholder Relations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 14px; color: var(--dark-navy); margin-bottom: 10px;">Operational Excellence</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Scalable Systems Architecture</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Team Building & Culture</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Risk Management & Compliance</li>
+                            <li style="font-size: 12px; margin-bottom: 5px;">• Digital Transformation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Education & Continuous Learning</h2>
+                <p style="font-size: 13px; margin-bottom: 10px;">
+                    <strong>Real-World Executive Education</strong><br>
+                    15+ years of hands-on leadership experience • Mentorship from Fortune 500 executives • Continuous learning through practical application
+                </p>
+                <p style="font-size: 13px;">
+                    <strong>Formal Education</strong><br>
+                    Associate of Arts, Political Science • Miami Dade College, 2015
+                </p>
+            </section>
+        </div>
+        
+        <footer class="footer">
+            <p class="footer-quote">
+                "In a world of credentialed conformity, entrepreneurial excellence is the ultimate differentiator."
+            </p>
+            <p class="footer-cta">
+                Ready to discuss how my unique blend of entrepreneurial drive and operational excellence can transform your organization.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
