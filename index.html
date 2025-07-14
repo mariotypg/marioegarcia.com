@@ -1193,6 +1193,30 @@
         
         /* Font imports */
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Align about metrics boxes neatly */
+.about-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.metric-box {
+    background: var(--white-ivory);
+    border-left: none;
+    border-top: 4px solid var(--harvest-gold);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.metric-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(8, 17, 53, 0.1);
+}
+
+    
     </style>
 </head>
 <body>
